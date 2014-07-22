@@ -1,0 +1,22 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Encuentra tu fotografía en nuestros eventos <small>¡Titulo del Album!</small></h1>
+        </div>
+    </div>
+
+    <div class="row font-p">
+        <ul class="grid cs-style-3 col-xs-12">
+            <li ng-repeat="album in albums">
+                <figure>
+                    <a href="" ng-click="open()">
+                        <img class="img-responsive img-home-portfolio" ng-src="{{album.portait}}" alt="{{album.name}}"></a>
+                    <figcaption class="span3">
+                        <h3 class="text-center">{{album.name}}</h3>
+                        <small>{{album.dateline}}</small>
+                    </figcaption>
+                </figure>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,57 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+          <h1 class="page-header">Visita Nuestra Tienda en la Academia <small>¡Excelentes precios!</small></h1>
+        </div>
+    </div>
+    <div class="well well-sm">
+        <strong>Tipo de Vista </strong>
+        <div class="btn-group">
+            <a href="#" id="list" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-th-list"></span>Lista</a> <a href="#" id="grid" class="btn btn-default btn-sm"><span
+                class="glyphicon glyphicon-th"></span>Cuadrícula</a>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 col-xl-3 col-sm-3">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Elije Categoría</h3>
+                </div>
+                <ul class="list-group">
+                    <a ng-href="" ng-click="selectedCat()" class="list-group-item">Ver todo</a>
+                    <a ng-href="" ng-click="selectedCat(cat.id)" class="list-group-item" ng-repeat="cat in cats">{{cat.name}}</a>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-9">
+            <div id="products" class="row list-group"  >
+                <div class="item col-xs-12 col-lg-4" ng-repeat="item in items">
+                    <div class="thumbnail">
+                        <img class="group list-group-image" ng-src="{{item.image}}" alt="{{item.alt}}" />
+                        <div class="caption">
+                            <p class="group inner list-group-item-heading"><b>{{item.name}}</b></p>
+                            <p class="group inner list-group-item-text"><b>Talla:</b> {{item.size}}</p>
+                            <p class="group inner list-group-item-text"><b>Material:</b> {{item.madeof}}</p>
+                            <p class="group inner list-group-item-text"><b>Colores:</b> {{item.color}}</p>
+                            <p class="group inner list-group-item-text description">{{item.description}}</p>
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                    <p class="lead">
+                                        {{item.price | currency}}
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <a class="btn btn-primary"><i class="fa fa-thumbs-up"></i> Me Gusta</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

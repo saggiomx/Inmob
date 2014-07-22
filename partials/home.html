@@ -1,0 +1,175 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Escuela Haran Taekyon Pocitos <small>¡Escuela de Taekwondo!</small></h1>
+        </div>
+    </div>
+</div>
+
+<div id="da-slider" class="da-slider span12">
+    <div class="da-slide">
+        <h2>Haran slide1</h2>
+        <p>Texto 1</p>
+        <div class="da-img">
+            <img src="image/slide/slide1.png" />
+        </div>
+    </div>
+    <div class="da-slide">
+        <h2>Haran Slide 2</h2>
+        <p>Texto 2</p>
+
+        <div class="da-img">
+            <img src="image/slide/slide2.png" />
+        </div>
+    </div>
+    <div class="da-slide">
+        <h2>Haran slide 3</h2>
+        <p>Texto 3</p>
+
+        <div class="da-img">
+            <img src="image/slide/slide3.png" />
+        </div>
+    </div>
+    <div class="da-slide">
+        <h2>Haran Slide 4</h2>
+        <p>Texto 4</p>
+
+        <div class="da-img">
+            <img src="image/slide/slide4.png" />
+        </div>
+    </div>
+    <nav class="da-arrows">
+        <span class="da-arrows-prev"><i class="glyphicon glyphicon-chevron-left"></i></span>
+        <span class="da-arrows-next"><i class="glyphicon glyphicon-chevron-right"></i></span>
+    </nav>
+</div>
+
+
+<div class="section">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12 col-md-12 text-center">
+                <h2>Próximos Eventos</h2>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <div class="row font-p">
+            <ul class="grid cs-style-3 col-xs-12">
+                <li ng-repeat="event in filteredEvents">
+                    <figure>
+                        <a href="#">
+                            <img class="img-responsive img-home-portfolio" ng-src="{{event.img}}"></a>
+                        <figcaption class="span3">
+                            <h3 class="text-center">{{event.name}} <small>{{event.dateline}}</small></h3>
+                        </figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- /.container -->
+
+</div>
+<!-- /.section -->
+
+<div class="section-colored text-center">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12 text-center ">
+                <h2>Haran Taekyon Escuela certificada por:</h2>
+                <p>Escuela certificada por bla bla bla</p>
+                <a class="" href="#/home">
+                    <img class="img-circle " src="image/nav/worldfederation.png" /></a>
+                <a class="" href="#/home"><a class="" href="#/home">
+                    <img class="img-circle " src="image/nav/haran.png" />
+                </a>
+                    <img class="img-circle " src="image/nav/federacionmexicana.png" /></a>
+                <br />
+                <br />
+                <button type="button" class="btn btn-primary"><i class="glyphicon glyphicon-download-alt"></i>Ver Afiliación</button>
+                <hr>
+            </div>
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+</div>
+<!-- /.section-colored -->
+
+<div class="section">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>Galería de Imágenes</h2>
+                <hr>
+            </div>
+
+            <div ng-controller="ModalDemoCtrl" >
+                <script type="text/ng-template" id="myModalContent.html">  
+
+                <div class="modal-body">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">{{ selectedImage.name }}</h3>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-image hide-panel-body">
+                            <img ng-src="{{ selectedImage.image }}" class="panel-image-preview" />
+                        </div>
+                        <div class="panel-body">
+                        </div>
+                        <div class="panel-footer text-center">  
+                            <a href="#facebook"><span class="fa fa-facebook"></span></a>
+                            <a href="#twitter"><span class="fa fa-twitter"></span></a>
+                            <a href="#close" ng-click="ok()"><span class="fa fa-times"></span></a>                            
+                        </div>
+                    </div>
+                </div>
+
+                </script>
+
+
+                <div class="row font-p">
+                    <ul class="grid cs-style-3 col-xs-12">
+                        <li ng-repeat="image in images">
+                            <figure>
+                                <a href="" ng-click="open()">
+                                    <img class="img-responsive img-home-portfolio" ng-src="{{image.thumb}}" alt="{{image.alt}}"></a>
+                                <figcaption class="span3">
+                                    <h3 class="text-center">{{image.name}}</h3>
+                                </figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+                </div>
+
+
+
+
+                <div class="col-lg-4 col-md-4 col-sm-6" >
+                    <a href="" ng-click="open()">
+                        <img class="img-responsive img-home-portfolio" ng-src="{{image.thumb}}" alt="{{image.alt}}"></a>
+                </div>
+            </div>
+
+
+
+
+            
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+</div>
+<!-- /.section -->
+

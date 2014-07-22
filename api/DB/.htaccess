@@ -1,0 +1,17 @@
+Options -MultiViews
+DirectoryIndex index.php
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteRule ^$ index.php [QSA,L]
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteRule ^(.*)$ index.php [QSA,L]
+	Header add Access-Control-Allow-Origin "*"
+	Header add Access-Control-Allow-Methods: "GET,POST,OPTIONS,DELETE,PUT"
+</IfModule>
+<IfModule mod_php5.c>
+	php_flag display_errors Off
+</IfModule>
+<Limit GET POST PUT DELETE>
+  Allow from all
+</Limit>
